@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+
+		<script type="text/javascript">
+			var fs = {
+				name: "fs",
+				emial: "1224352368@qq.com",
+				todos: {
+					one: [{
+							name: "es6",
+							complete: false,
+							href:"./es6.md"
+						},
+						{
+							name: "require.js",
+							complete: false,
+						},
+						{
+							name: "廖雪峰js",
+							complete: false,
+						},
+						{
+							name: "css3",
+							complete: false,
+						},
+						{
+							name: "php设计模式",
+							complete: false,
+						},
+						{
+							name: "php错误异常",
+							complete: false,
+						},
+						{
+							name: "php jwt",
+							complete: false,
+						},
+						{
+							name: "php oop",
+							complete: false,
+						},
+						{
+							name: "php redis 单点",
+							complete: false,
+						},
+						{
+							name: "redis",
+							complete: false,
+						},
+						{
+							name: "memchace",
+							complete: false,
+						},
+						{
+							name: "mongodb",
+							complete: false,
+						},
+						{
+							name: "mysql 优化",
+							complete: false,
+						},
+						{
+							name: "vue 2.5全栈",
+							complete: true,
+						}, {
+							name: "php 进程,线程",
+							complete: false,
+						}, {
+							name: "tp5.1 框架底层分析",
+							complete: false
+						},
+						{
+							name: "自定义个人框架 ,写个人博客",
+							complete: false
+						},
+						{
+							name: "workman聊天室",
+							complete: false
+						}, {
+							name: "ivew基础",
+							complete: false
+						}, {
+							name: "ivew 进阶",
+							complete: false
+						},
+						{
+							name: "ivew admin",
+							complete: false
+						},
+
+					],
+					two: [{
+							name: "node blog",
+							complete: false,
+						},
+						{
+							name: "黑马 vue",
+							complete: false
+						}
+					],
+					three: [{
+							name: "tp5 商城",
+							complete: false,
+						},
+						{
+							name: "tp5 插件化",
+							complete: false
+						},
+						{
+							name: "tp5 慕课路径",
+							complete: false
+						},
+					],
+					four: [{
+							name: "7月的 微信小程序",
+							complete: false,
+						},
+						{
+							name: "7月的 商业微信小程序",
+							complete: false,
+						},
+						{
+							name: "7月的 node",
+							complete: false,
+						}
+					],
+					five: [{
+							name: "vue点餐",
+							complete: false,
+						},
+						{
+							name: "vue+node+mongodb 商城",
+							complete: false,
+						},
+						{
+							name: "vue cli",
+							complete: false
+						},
+						{
+							name: "vue 2.5",
+							complete: false
+						}
+					],
+					six: [{
+							name: "swoole",
+							complete: false,
+						},
+						{
+							name: "easyswoole",
+							complete: false
+						},
+						{
+							name: "laravel 路径",
+							complete: false
+						}
+					]
+				}
+			}
+
+			function renderTpl(todos, titile = "") {
+
+				var todosStr = "";
+
+				todosStr = todos.map((item) => {
+					return `<a href="${item.href}" class="list-group-item"> ${item.name}  <span class="badge">				 
+					 ${item.complete ? "✔" : "✖" }
+					 </span> </a>`;
+				}).join("");
+
+				return `<a href="#" class="list-group-item active">${titile}</a>` + todosStr + "<br/>";
+
+			}
+
+
+			const tpl =
+				`
+				
+				<div class="container">
+					<div class="row" >
+				
+								<div class="panel panel-danger">
+						<div class="panel-heading">
+							<h3 class="panel-title">计划列表-完成计划 去旅游一次</h3>
+						</div>
+						<div class="panel-body">
+							${renderTpl(fs.todos.one,"第1阶段")}
+							${renderTpl(fs.todos.two,"第2阶段")}
+							${renderTpl(fs.todos.three,"第3阶段")}
+							${renderTpl(fs.todos.four,"第4阶段")}
+							${renderTpl(fs.todos.five,"第5阶段")}
+							${renderTpl(fs.todos.six,"第6阶段")}
+						</div>
+					</div>
+					</div>
+				</div>
+			
+			`;
+
+			document.body.innerHTML = tpl
+		</script>
+	</body>
+</html>
