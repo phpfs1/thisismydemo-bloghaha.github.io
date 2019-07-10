@@ -1,0 +1,1 @@
+define("jquery",function(){}),define("math",[],function(){return{add:function(n,e){return n+e}}});const baseUrl="../node_modules/jquery/dist/";require.config({paths:{jquery:[baseUrl+"jquery.min"],math:"math"}}),require(["jquery"],function(n){n(function(){})}),require(["math"],function(n){console.log(n.add(1,2))}),define("main",function(){});
